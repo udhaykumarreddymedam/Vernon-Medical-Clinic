@@ -141,8 +141,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #ebfcfa;
-  /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%); */
+  background: #ffffff;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -811,11 +810,22 @@ section {
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+  color: #8e1a4b;
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
+}
+
+.schedule {
+  padding: 5px;
+}
+.day {
+  margin-bottom: 10px;
+}
+.day h5 {
+  margin-bottom: 2px;
 }
 
 .about .content ul li {
@@ -830,58 +840,6 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  padding-bottom: 30px;
-}
-
-.counts .count-box {
-  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  width: 100%;
-  /* background: #8e1a4b; */
-}
-
-.counts .count-box i {
-  display: block;
-  font-size: 30px;
-  color: #3fbbc0;
-  float: left;
-}
-
-.counts .count-box span {
-  font-size: 42px;
-  line-height: 24px;
-  display: block;
-  font-weight: 700;
-  color: #8e1a4b;
-  margin-left: 50px;
-}
-
-.counts .count-box p {
-  padding: 30px 0 0 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-
-.counts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  /* color: #7b7b7b; */
-  color: #01cab8;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-
-.counts .count-box a:hover {
-  color: #3fbbc0;
 }
 
 /*--------------------------------------------------------------
@@ -1368,113 +1326,14 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
-.pricing .box {
-  padding: 20px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.pricing h3 {
-  font-weight: 400;
-  margin: -20px -20px 20px -20px;
-  padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #777777;
-  background: #f8f8f8;
+.price {
+  font-weight: bold;
 }
-
-.pricing h4 {
-  font-size: 36px;
-  color: #3fbbc0;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
-}
-
-.pricing h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing ul {
-  padding: 0;
-  list-style: none;
-  color: #444444;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing ul li {
-  padding-bottom: 16px;
-}
-
-.pricing ul i {
-  color: #3fbbc0;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .btn-wrap {
-  margin: 20px -20px -20px -20px;
-  padding: 20px 15px;
-  background: #f8f8f8;
-  text-align: center;
-}
-
-.pricing .btn-buy {
-  background: #01cab8;
-  display: inline-block;
-  padding: 8px 35px 10px 35px;
-  border-radius: 4px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.pricing .btn-buy:hover {
-  background: #65c9cd;
-}
-
-.pricing .featured h3 {
-  color: #fff;
-  background: #3fbbc0;
-}
-
-.pricing .advanced {
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-  background: #3fbbc0;
-  color: #fff;
-}
-
 /*--------------------------------------------------------------
 # Frequently Asked Questioins
 --------------------------------------------------------------*/
@@ -1665,31 +1524,19 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  /* background: #eeeeee; */
-  background: #b2fefa; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #0ed2f7,
-    #b2fefa
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #0ed2f7,
-    #b2fefa
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #8e1a4b;
   padding: 10 0 10px 0;
-  color: #555555;
+  color: #ffffff;
   font-size: 14px;
 }
 
 #footer .copyright {
   text-align: center;
-  padding-top: 10px;
+  padding: 20px;
 }
-
+/* 
 #footer .credits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-}
+} */
