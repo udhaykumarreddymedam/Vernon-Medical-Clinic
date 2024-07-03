@@ -205,6 +205,88 @@
     </section>
     <!-- End Featured Services Section -->
 
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Doctors</h2>
+        </div>
+
+        <div class="row justify-content-md-between">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="" />
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dr. Mary Ward</h4>
+                <span>Dermatology & Women’s Health</span>
+                <p class="card-text">Dr Shields has a special interest in Women's Health, Dermatology and <span class="more-text">Medical Education and holds diplomas in Obstetrics and Gynaecology, Dermatology and Geriatric Medicine. She is a GP  Trainer for the Trinity College Dublin GP Training Programme and is also responsible for undergraduate medical students in the pracitce.</span><span class="read-more fw-bold">Read More</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="" />
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dr. Clare Shields</h4>
+                <span>Women’s Health</span>
+                <p class="card-text">Mary Ward has a special <span class="more-text">interest in dermatology and women’s health.</span><span class="read-more fw-bold">Read More</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="" />
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ms. Gaye Keane</h4>
+                <span>Cervical Smear Campaign, Travel Vaccinations & Childhood Immunisations</span>
+                <p class="card-text">Gaye Keane, our practice nurse is actively <span class="more-text">involved in the cervical smear campaign, travel vaccinations and childhood immunisations.</span><span class="read-more fw-bold">Read More</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll('.read-more').forEach(item => {
+          item.addEventListener('click', event => {
+              const moreText = item.previousElementSibling;
+              if (moreText.style.display === 'none' || moreText.style.display === '') {
+                  moreText.style.display = 'inline';
+                  item.textContent = 'Read Less';
+              } else {
+                  moreText.style.display = 'none';
+                  item.textContent = 'Read More';
+              }
+          });
+      });
+  </script>
+
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
@@ -745,72 +827,6 @@
       </div>
     </section>
     <!-- End Testimonials Section -->
-
-    <!-- ======= Doctors Section ======= -->
-    <section id="doctors" class="doctors section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Doctors</h2>
-        </div>
-
-        <div class="row justify-content-md-between">
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="" />
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Mary Ward</h4>
-                <span>Dermatology & Women’s Health</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="" />
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Clare Shields</h4>
-                <span>Women’s Health</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="" />
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Ms. Gaye Keane</h4>
-                <span>Cervical Smear Campaign, Travel Vaccinations & Childhood Immunisations</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Doctors Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
