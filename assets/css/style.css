@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  --font-family: Inter;
   color: #444444;
 }
 
@@ -18,19 +18,20 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+h6,
+p,
+span {
+  font-family: Inter;
 }
 
 :root {
   --purple: #8e1a4b;
   --white: #ffffff;
   --primary: #8e1a4b;
-  --Secondary: var(--purple);
+  --Secondary: #8e1a4b;
   --Orange: #f19a73;
   --gray: #555555;
   --opacityblack: #000000;
-  --
 }
 
 /*--------------------------------------------------------------
@@ -97,7 +98,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #5ec6ca;
+  background: var(--gray);
   color: #fff;
 }
 
@@ -123,9 +124,10 @@ h6 {
   color: var(--white);
   height: 40px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   z-index: 996;
   transition: all 0.5s;
+  font-family: Inter;
 }
 
 #topbar.topbar-scrolled {
@@ -160,12 +162,13 @@ h6 {
 }
 
 #header .logo {
-  font-size: 28px;
+  font-size: 24px;
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+  font-family: Inter;
 }
 
 #header .logo a {
@@ -180,15 +183,16 @@ h6 {
 * Appointment Button
 */
 .appointment-btn {
-  margin-left: 30px;
+  margin-left: 25px;
   border: 2px solid var(--purple);
   color: var(--purple);
-  border-radius: 20px;
-  padding: 5px 15px;
+  border-radius: 10px;
+  padding: 5px 10px;
   white-space: nowrap;
   transition: 0.3s;
-  font-size: 14px;
   display: inline-block;
+  font-family: Inter;
+  text-transform: uppercase;
 }
 
 .appointment-btn:hover {
@@ -231,8 +235,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
+  font-family: Inter;
   color: var(--gray);
   white-space: nowrap;
   transition: 0.3s;
@@ -464,7 +467,7 @@ h6 {
   margin: 10px;
   padding: 80px 40px;
   background: var(--opacityblack);
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 10px;
   overflow: hidden;
   border-top: 5px solid var(--purple);
@@ -599,7 +602,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Sections General
+# Doctors General
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
@@ -643,34 +646,64 @@ section {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
-.featured-services .icon-box {
-  padding: 30px;
+.flip-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.flip-card-inner {
   position: relative;
-  overflow: hidden;
-  /* background: var(--Secondary); */
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-  transition: all 0.3s ease-in-out;
-  border-radius: 12px;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.featured-services .icon-box::before {
-  content: "";
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 100%;
-  transition: all 0.3s;
-  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
 }
 
-.featured-services .icon-box:hover::before {
-  background: var(--purple);
-  top: 0;
-  border-radius: 0px;
+.flip-card-front {
+  background-color: var(--white);
+}
+
+.flip-card-front h5 {
+  font-size: large;
+  font-weight: 400;
+}
+
+.flip-card-front h5 a {
+  color: var(--opacityblack);
+}
+
+.flip-card-back {
+  background-color: var(--purple);
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.flip-card-back p {
+  padding: 20px;
 }
 
 .featured-services .icon {
@@ -684,66 +717,77 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.featured-services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.featured-services .title a {
-  color: var(--opacityblack);
-}
-
-.featured-services .description {
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 600;
-  color: var(--opacityblack);
-  opacity: 0.6;
-  margin-bottom: 0;
-}
-
-.featured-services .icon-box:hover .title a,
-.featured-services .icon-box:hover .description {
-  color: var(--white);
-}
-
-.featured-services .icon-box:hover .icon i {
-  color: var(--white);
-}
-
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
-.cta {
-  background: var(--purple);
-  color: var(--white);
-  background-size: cover;
-  padding: 60px 0;
+#cta {
+  position: relative;
+  overflow: hidden;
 }
 
-.cta h3 {
+#hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.text-center {
+  color: var(--opacityblack);
+  padding: 10px 50px;
+  font-weight: 600;
+}
+
+.text-center h3 {
   font-size: 28px;
   font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--purple);
 }
 
-.cta .cta-btn {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+.text-center p {
   font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 35px;
-  border-radius: 25px;
-  transition: 0.5s;
-  margin-top: 10px;
-  background: var(--Secondary);
-  color: var(--white);
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.cta .cta-btn:hover {
+.text-center .cta-btn {
+  display: inline-block;
+  background: var(--purple);
+  color: var(--white);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-family: Inter;
+}
+
+.text-center .cta-btn:hover {
   background: var(--white);
-  color: var(--Secondary);
+  color: var(--purple);
 }
 
 /*--------------------------------------------------------------
@@ -876,6 +920,10 @@ section {
 .services .description {
   line-height: 24px;
   font-size: 14px;
+  font-family: Inter;
+  color: var(--gray);
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 /*--------------------------------------------------------------
@@ -1144,17 +1192,7 @@ section {
 # Doctors
 --------------------------------------------------------------*/
 #doctors {
-  background: #83a4d4; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #b6fbff,
-    #83a4d4
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #b6fbff,
-    #83a4d4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: var(--white);
 }
 
 .doctors .member {
@@ -1162,9 +1200,7 @@ section {
   overflow: hidden;
   text-align: center;
   border-radius: 4px;
-  /* background: var(--white); */
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background: var(--white);
 }
 
 .doctors .member .member-img {
@@ -1224,8 +1260,8 @@ section {
 .doctors .member .member-info span {
   font-size: 14px;
   line-height: 26px;
+  font-weight: 600;
   color: var(--gray);
-  font-family: helvetica;
 }
 
 .doctors .member .member-info p {
@@ -1233,7 +1269,6 @@ section {
   line-height: 26px;
   opacity: 0.7;
   color: var(--gray);
-  font-family: helvetica;
 }
 
 .doctors .member:hover {
@@ -1241,6 +1276,12 @@ section {
 }
 .doctors .member:hover .social {
   opacity: 1;
+}
+
+.read-more {
+  cursor: pointer;
+  color: var(--purple);
+  font-family: Inter;
 }
 
 /*--------------------------------------------------------------
