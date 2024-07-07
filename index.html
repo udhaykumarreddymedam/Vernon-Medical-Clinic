@@ -30,23 +30,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
-
-  <!-- =======================================================
-  * Template Name: Medicio
-  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-      <div class="align-items-center d-none d-md-flex">
-        <i class="bi bi-clock"></i> Monday - Friday, 9AM to 5PM
-      </div>
       <div class="d-flex align-items-center gap-3">
         <div><i class="bi bi-telephone"></i> Tel: +1 8532070</div>
         <div><i class="fa-solid fa-tty"></i> Fax: +1 8533692</div>
@@ -63,89 +52,69 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto fw-bold" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto fw-bold" href="#about">About</a></li>
-          <li><a class="nav-link scrollto fw-bold" href="#services">Practice Services</a></li>
+          <li><a class="nav-link scrollto fw-bold fs-6" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto fw-bold fs-6" href="#doctors">Doctors</a></li>
+          <li><a class="nav-link scrollto fw-bold fs-6" href="#about">About</a></li>
+          <li><a class="nav-link scrollto fw-bold fs-6" href="#services">Services</a></li>
           <li>
-            <a class="nav-link scrollto fw-bold" href="#departments">Departments</a>
+            <a class="nav-link scrollto fw-bold fs-6" href="#departments">Departments</a>
           </li>
-          <li><a class="nav-link scrollto fw-bold" href="#doctors">Doctors</a></li>
-          <li class="dropdown">
-            <a href="#"><span class="fw-bold">Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          
+          <li class="dropdown border-none">
+            <a href="#"><span class="fw-bold fs-6">forms</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#" class="fw-bold">Drop Down 1</a></li>
-              <li class="dropdown">
-                <a href="#"><span class="fw-bold">Deep Drop Down</span>
-                  <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#" class="fw-bold fs-6">Expenses – Claim for Tax Relief - MED 1 Form</a></li>
+              <li><a href="#" class="fw-bold fs-6">Claim form for Carer’s Allowance - CR1 Form</a></li>
+              <li><a href="#" class="fw-bold fs-6">Application form for Carer’s Benefit – CARB Form</a></li>
+              <li><a href="#" class="fw-bold fs-6">Driving License – Medical Report Form</a></li> 
+              <li><a href="#" class="fw-bold fs-6">GP Visit Card - Over 70s</a></li>
+              <li><a href="#" class="fw-bold fs-6">GP Visit Card - Under 6s</a></li>
+              <li><a href="#" class="fw-bold fs-6">Medical Card Application - MC1 Form</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto fw-bold" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto fw-bold fs-6" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto fw-bold"><span class="d-none d-md-inline">Make an</span>
-        Appointment</a>
+      <a href="#appointment" class="appointment-btn scrollto fw-bold">Appointment</a>
     </div>
   </header>
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-    <div id="heroCarousel" data-bs-interval="2000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-3.jpg)">
-          <div class="container">
-            <h2>WELCOME TO VERNON</h2>
-            <p>
-              We provide primary care for all age groups to both medical card patients and private patients. We have a
-              designated disabled car parking space and a downstairs surgery for disabled patients which can be
-              specifically requested when making an appointment.
-            </p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
-          </div>
+    <video autoplay muted loop id="hero-video">
+      <source src="assets/vid/medical.mp4" type="video/mp4" />
+    </video>
+    <div class="containers">
+      <div class="testimonial">
+        <div class="slide">
+          <h2>WELCOME TO VERNON</h2>
+          <p>
+            We provide primary care for all age groups to both medical card patients and private patients. We have a
+            designated disabled car parking space and a downstairs surgery for disabled patients which can be
+            specifically requested when making an appointment.
+          </p>
         </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
-          <div class="container">
-            <h2>Specialized Medical Departments</h2>
-            <p>
-              Explore our specialized departments, including pediatrics, geriatrics, cardiology, and more. Our experienced specialists use state-of-the-art technology and advanced medical practices to ensure the best possible outcomes for our patients.
-            </p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
-          </div>
+        <div class="slide">
+          <h2>Specialized Medical Departments</h2>
+          <p>
+            Explore our specialized departments, including pediatrics, geriatrics, cardiology, and more. Our experienced
+            specialists use state-of-the-art technology and advanced medical practices to ensure the best possible
+            outcomes for our patients.
+          </p>
         </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-1.jpg)">
-          <div class="container">
-            <h2>Patient-Centered Approach</h2>
-            <p>
-              Your health and well-being are our top priorities. We strive to create a welcoming and comfortable environment for all our patients. From convenient appointment scheduling to compassionate care, we are here to support you every step of the way.
-            </p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
-          </div>
+        <div class="slide">
+          <h2>Patient-Centered Approach</h2>
+          <p>
+            Your health and well-being are our top priorities. We strive to create a welcoming and comfortable environment
+            for all our patients. From convenient appointment scheduling to compassionate care, we are here to support you
+            every step of the way.
+          </p>
         </div>
       </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
     </div>
   </section>
   <!-- End Hero -->
@@ -211,7 +180,7 @@
         <div class="section-title">
           <h2>Doctors</h2>
         </div>
-    
+
         <div class="row justify-content-md-between">
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
@@ -219,8 +188,6 @@
                 <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="Dr. Mary Ward" />
                 <div class="social">
                   <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -228,21 +195,24 @@
                 <h4>Dr. Mary Ward</h4>
                 <span>Dermatology & Women’s Health</span>
                 <p class="card-text">
-                  Dr. Mary Ward has a special interest in Women's Health, Dermatology and Medical Education and holds diplomas in Obstetrics and Gynaecology, Dermatology and Geriatric Medicine.<span class="more-text" style="display:none;">She is a GP Trainer for the Trinity College Dublin GP Training Programme and is also responsible for undergraduate medical students in the practice. She is passionate about providing comprehensive care to her patients and has been recognized for her contributions to medical education.</span>
+                  Dr. Mary Ward has a special interest in Women's Health, Dermatology and Medical Education and holds
+                  diplomas in Obstetrics and Gynaecology, Dermatology and Geriatric Medicine.<span class="more-text"
+                    style="display:none;"> She is a GP Trainer for the Trinity College Dublin GP Training Programme and
+                    is also responsible for undergraduate medical students in the practice. She is passionate about
+                    providing comprehensive care to her patients and has been recognized for her contributions to
+                    medical education.</span>
                   <span class="read-more fw-bold" style="cursor:pointer; color:#007bff;">Read More</span>
                 </p>
               </div>
             </div>
           </div>
-    
+
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
                 <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="Dr. Clare Shields" />
                 <div class="social">
                   <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -250,22 +220,22 @@
                 <h4>Dr. Clare Shields</h4>
                 <span>Women’s Health</span>
                 <p class="card-text">
-                  Dr. Clare Shields has a special interest in women's health and is dedicated to providing exceptional care to her patients.
-                  <span class="more-text" style="display:none;"> She is highly skilled in managing a variety of women’s health issues and is committed to staying updated with the latest advancements in her field.</span>
+                  Dr. Clare Shields has a special interest in women's health and is dedicated to providing exceptional
+                  care to her patients.
+                  <span class="more-text" style="display:none;"> She is highly skilled in managing a variety of women’s
+                    health issues and is committed to staying updated with the latest advancements in her field.</span>
                   <span class="read-more fw-bold" style="cursor:pointer; color:#007bff;">Read More</span>
                 </p>
               </div>
             </div>
           </div>
-    
+
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
                 <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="Ms. Gaye Keane" />
                 <div class="social">
                   <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -273,8 +243,10 @@
                 <h4>Ms. Gaye Keane</h4>
                 <span>Cervical Smear Campaign, Travel Vaccinations & Childhood Immunisations</span>
                 <p class="card-text">
-                  Ms. Gaye Keane, our practice nurse, is actively involved in the cervical smear campaign, travel vaccinations, and childhood immunisations.
-                  <span class="more-text" style="display:none;"> She ensures that our patients receive the necessary preventive care and is dedicated to promoting health and wellness in the community.</span>
+                  Ms. Gaye Keane, our practice nurse, is actively involved in the cervical smear campaign, travel
+                  vaccinations, and childhood immunisations.
+                  <span class="more-text" style="display:none;"> She ensures that our patients receive the necessary
+                    preventive care and is dedicated to promoting health and wellness in the community.</span>
                   <span class="read-more fw-bold" style="cursor:pointer; color:#007bff;">Read More</span>
                 </p>
               </div>
@@ -283,7 +255,7 @@
         </div>
       </div>
     </section>
-    
+
     <script>
       document.querySelectorAll('.read-more').forEach(item => {
         item.addEventListener('click', event => {
@@ -302,6 +274,9 @@
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
+        <video autoplay muted loop id="hero-video">
+          <source src="assets/vid/dna.mp4" type="video/mp4" />
+        </video>
         <div class="text-center">
           <h3 class="mb-3">In an emergency? Need help now?</h3>
           <p>
@@ -479,7 +454,8 @@
               <i class="bx bx-receipt"></i>
               <h4>Cardiology</h4>
               <p>
-                We are dedicated to helping you maintain a healthy heart through personalized treatment plans and preventative care strategies.
+                We are dedicated to helping you maintain a healthy heart through personalized treatment plans and
+                preventative care strategies.
               </p>
             </div>
             <div class="icon-box mt-5">
@@ -493,14 +469,16 @@
               <i class="bx bx-images"></i>
               <h4>Hepatology</h4>
               <p>
-                We focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal liver health.
+                We focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal
+                liver health.
               </p>
             </div>
             <div class="icon-box mt-5">
               <i class="bx bx-shield"></i>
               <h4>Pediatrics</h4>
               <p>
-                We strive to create a welcoming and supportive environment for both children and their families, ensuring that your child's health is our top priority.
+                We strive to create a welcoming and supportive environment for both children and their families,
+                ensuring that your child's health is our top priority.
               </p>
             </div>
           </div>
@@ -667,21 +645,24 @@
                 <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
                   <h4>Cardiology</h4>
                   <p>
-                    We are dedicated to helping you maintain a healthy heart through personalized treatment plans and preventative care strategies.
+                    We are dedicated to helping you maintain a healthy heart through personalized treatment plans and
+                    preventative care strategies.
                   </p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                   <h4>Neurology</h4>
-                  <p>We are committed to improving your quality of life with compassionate and tailored medical care.</p>
+                  <p>We are committed to improving your quality of life with compassionate and tailored medical care.
+                  </p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
                   <h4>Hepatology</h4>
                   <p>
-                    We focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal liver health.
+                    We focus on holistic care, combining medical treatments with lifestyle modifications to ensure
+                    optimal liver health.
                   </p>
                 </a>
               </li>
@@ -689,7 +670,8 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
                   <h4>Pediatrics</h4>
                   <p>
-                    We strive to create a welcoming and supportive environment for both children and their families, ensuring that your child's health is our top priority.
+                    We strive to create a welcoming and supportive environment for both children and their families,
+                    ensuring that your child's health is our top priority.
                   </p>
                 </a>
               </li>
@@ -700,11 +682,16 @@
               <div class="tab-pane active show" id="tab-1">
                 <h3>Cardiology</h3>
                 <p class="fst-italic">
-                  We are dedicated to helping you maintain a healthy heart through personalized treatment plans and preventative care strategies.
+                  We are dedicated to helping you maintain a healthy heart through personalized treatment plans and
+                  preventative care strategies.
                 </p>
                 <img src="assets/img/departments-1.jpg" alt="" class="img-fluid" />
                 <p>
-                  At Vernon Medical Clinic, our Cardiology Department specializes in diagnosing and treating a wide range of heart conditions. Our experienced cardiologists use state-of-the-art technology to provide comprehensive care, including cardiac screenings, echocardiograms, and stress tests. We are dedicated to helping you maintain a healthy heart through personalized treatment plans and preventative care strategies.
+                  At Vernon Medical Clinic, our Cardiology Department specializes in diagnosing and treating a wide
+                  range of heart conditions. Our experienced cardiologists use state-of-the-art technology to provide
+                  comprehensive care, including cardiac screenings, echocardiograms, and stress tests. We are dedicated
+                  to helping you maintain a healthy heart through personalized treatment plans and preventative care
+                  strategies.
                 </p>
               </div>
               <div class="tab-pane" id="tab-2">
@@ -714,27 +701,41 @@
                 </p>
                 <img src="assets/img/departments-2.jpg" alt="" class="img-fluid" />
                 <p>
-                  Our Neurology Department offers expert care for patients with neurological disorders, including migraines, epilepsy, Parkinson's disease, and multiple sclerosis. Our team of skilled neurologists employs advanced diagnostic tools and therapeutic techniques to manage and treat complex neurological conditions. We are committed to improving your quality of life with compassionate and tailored medical care.
+                  Our Neurology Department offers expert care for patients with neurological disorders, including
+                  migraines, epilepsy, Parkinson's disease, and multiple sclerosis. Our team of skilled neurologists
+                  employs advanced diagnostic tools and therapeutic techniques to manage and treat complex neurological
+                  conditions. We are committed to improving your quality of life with compassionate and tailored medical
+                  care.
                 </p>
               </div>
               <div class="tab-pane" id="tab-3">
                 <h3>Hepatology</h3>
                 <p class="fst-italic">
-                  We focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal liver health.
+                  We focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal
+                  liver health.
                 </p>
                 <img src="assets/img/departments-3.jpg" alt="" class="img-fluid" />
                 <p>
-                  The Hepatology Department at Vernon Medical Clinic provides specialized care for liver-related diseases such as hepatitis, cirrhosis, and fatty liver disease. Our hepatologists are equipped with the latest knowledge and technology to offer accurate diagnoses and effective treatment options. We focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal liver health.
+                  The Hepatology Department at Vernon Medical Clinic provides specialized care for liver-related
+                  diseases such as hepatitis, cirrhosis, and fatty liver disease. Our hepatologists are equipped with
+                  the latest knowledge and technology to offer accurate diagnoses and effective treatment options. We
+                  focus on holistic care, combining medical treatments with lifestyle modifications to ensure optimal
+                  liver health.
                 </p>
               </div>
               <div class="tab-pane" id="tab-4">
                 <h3>Pediatrics</h3>
                 <p class="fst-italic">
-                  We strive to create a welcoming and supportive environment for both children and their families, ensuring that your child's health is our top priority.
+                  We strive to create a welcoming and supportive environment for both children and their families,
+                  ensuring that your child's health is our top priority.
                 </p>
                 <img src="assets/img/departments-4.jpg" alt="" class="img-fluid" />
                 <p>
-                  Our Pediatrics Department is dedicated to the health and well-being of children from birth through adolescence. Our pediatricians offer a full spectrum of services, including routine check-ups, vaccinations, growth and development assessments, and treatment for common childhood illnesses. We strive to create a welcoming and supportive environment for both children and their families, ensuring that your child's health is our top priority.
+                  Our Pediatrics Department is dedicated to the health and well-being of children from birth through
+                  adolescence. Our pediatricians offer a full spectrum of services, including routine check-ups,
+                  vaccinations, growth and development assessments, and treatment for common childhood illnesses. We
+                  strive to create a welcoming and supportive environment for both children and their families, ensuring
+                  that your child's health is our top priority.
                 </p>
               </div>
             </div>
@@ -1148,29 +1149,34 @@
             </div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-                You can book an appointment by calling our reception at [insert phone number] during business hours. Alternatively, you can use our online booking system available on our website.
+                You can book an appointment by calling our reception at [insert phone number] during business hours.
+                Alternatively, you can use our online booking system available on our website.
               </p>
             </div>
           </li>
 
           <li>
             <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">
-              Is the clinic accessible for disabled patients? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+              Is the clinic accessible for disabled patients? <i class="bi bi-chevron-down icon-show"></i><i
+                class="bi bi-chevron-up icon-close"></i>
             </div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Yes, our clinic is fully accessible for disabled patients. We have a designated disabled car parking space and a downstairs surgery that can be specifically requested when making an appointment.
+                Yes, our clinic is fully accessible for disabled patients. We have a designated disabled car parking
+                space and a downstairs surgery that can be specifically requested when making an appointment.
               </p>
             </div>
           </li>
 
           <li>
             <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">
-              Can I get a medical certificate for work or school? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+              Can I get a medical certificate for work or school? <i class="bi bi-chevron-down icon-show"></i><i
+                class="bi bi-chevron-up icon-close"></i>
             </div>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Yes, we provide medical certificates for work, school, pre-employment, and adoption medicals. Please inform the doctor during your consultation if you need a certificate.
+                Yes, we provide medical certificates for work, school, pre-employment, and adoption medicals. Please
+                inform the doctor during your consultation if you need a certificate.
               </p>
             </div>
           </li>
@@ -1182,7 +1188,8 @@
             </div>
             <div id="faq6" class="collapse" data-bs-parent=".faq-list">
               <p>
-                For repeat prescriptions, you can request them through our online patient portal, call our clinic, or visit us in person. Please allow 48 hours for the prescription to be processed.
+                For repeat prescriptions, you can request them through our online patient portal, call our clinic, or
+                visit us in person. Please allow 48 hours for the prescription to be processed.
               </p>
             </div>
           </li>
@@ -1194,7 +1201,8 @@
             </div>
             <div id="faq7" class="collapse" data-bs-parent=".faq-list">
               <p>
-                We accept cash, credit/debit cards, and health insurance (if applicable). Please check with our reception for more details on insurance providers we partner with.
+                We accept cash, credit/debit cards, and health insurance (if applicable). Please check with our
+                reception for more details on insurance providers we partner with.
               </p>
             </div>
           </li>
@@ -1206,7 +1214,8 @@
             </div>
             <div id="faq8" class="collapse" data-bs-parent=".faq-list">
               <p>
-                We do accept walk-in patients, but we highly recommend booking an appointment in advance to ensure you receive timely care.
+                We do accept walk-in patients, but we highly recommend booking an appointment in advance to ensure you
+                receive timely care.
               </p>
             </div>
           </li>
