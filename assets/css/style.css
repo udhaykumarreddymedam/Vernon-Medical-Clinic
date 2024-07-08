@@ -1,15 +1,15 @@
 body {
-  --font-family: Inter;
+  --font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: var(--purple);
+  color: var(--blue);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--purple);
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -21,17 +21,17 @@ h5,
 h6,
 p,
 span {
-  font-family: Inter;
+  font-family: "Open Sans", sans-serif;
 }
 
 :root {
-  --purple: #8e1a4b;
+  --blue: #1465a3;
   --white: #ffffff;
-  --primary: #8e1a4b;
-  --Secondary: #8e1a4b;
   --Orange: #f19a73;
   --gray: #555555;
-  --opacityblack: #000000;
+  --black: #000000;
+  --paleblue: #f7fcfc;
+  --font-sans: "Open Sans", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -45,7 +45,7 @@ span {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: var(--white);
 }
 
 #preloader:before {
@@ -53,7 +53,7 @@ span {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid var(--primary);
+  border: 6px solid var(--blue);
   border-top-color: #ecf8f9;
   border-radius: 50%;
   width: 60px;
@@ -81,7 +81,7 @@ span {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: var(--primary);
+  background: var(--blue);
   width: 34px;
   height: 65px;
   border-top-left-radius: 25px;
@@ -93,13 +93,13 @@ span {
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: var(--white);
   line-height: 0;
 }
 
 .back-to-top:hover {
   background: var(--gray);
-  color: #fff;
+  color: var(--white);
 }
 
 .back-to-top.active {
@@ -120,14 +120,14 @@ span {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: var(--purple);
+  background: var(--blue);
   color: var(--white);
   height: 40px;
   font-size: 14px;
   font-weight: 400;
   z-index: 996;
   transition: all 0.5s;
-  font-family: Inter;
+  font-family: var(--font-sans);
 }
 
 #topbar.topbar-scrolled {
@@ -168,11 +168,12 @@ span {
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: Inter;
+  font-family: var(--font-sans);
+  text-align: center;
 }
 
 #header .logo a {
-  color: var(--purple);
+  color: var(--blue);
 }
 
 #header .logo img {
@@ -184,20 +185,21 @@ span {
 */
 .appointment-btn {
   margin-left: 25px;
-  border: 2px solid var(--purple);
-  color: var(--purple);
+  border: 2px solid var(--blue);
+  color: var(--blue);
   border-radius: 10px;
   padding: 5px 10px;
   white-space: nowrap;
   transition: 0.3s;
   display: inline-block;
-  font-family: Inter;
+  font-family: var(--font-sans);
   text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 .appointment-btn:hover {
   color: var(--white);
-  background-color: var(--purple);
+  background-color: var(--blue);
 }
 
 @media (max-width: 768px) {
@@ -235,12 +237,13 @@ span {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: Inter;
+  font-family: var(--font-sans);
   color: var(--gray);
   white-space: nowrap;
   transition: 0.3s;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .navbar a i,
@@ -254,7 +257,7 @@ span {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .navbar .dropdown ul {
@@ -289,7 +292,7 @@ span {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  background-color: var(--purple);
+  background-color: var(--blue);
   color: var(--white);
 }
 
@@ -391,7 +394,7 @@ span {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .navbar-mobile .dropdown ul {
@@ -432,7 +435,6 @@ span {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-/* General styles for responsiveness */
 #hero {
   position: relative;
   width: 100%;
@@ -454,150 +456,100 @@ span {
   position: relative;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  text-align: center;
-  align-items: flex-end;
+  text-align: left;
 }
 
 .testimonial {
   position: relative;
-  width: 80%;
-  max-width: 1000px;
-  margin: 10px;
-  padding: 80px 40px;
-  background: var(--opacityblack);
-  opacity: 0.8;
-  border-radius: 10px;
+  width: 30%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
   overflow: hidden;
-  border-top: 5px solid var(--purple);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-#hero h2 {
-  color: var(--purple);
-  margin-bottom: 20px;
-  font-size: 36px;
-  font-weight: 700;
-}
-
-#hero p {
-  color: var(--white);
-}
-
-.slide {
+.slide-container {
   position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slide 30s infinite;
+  animation: scroll 15s linear infinite;
 }
 
-.slide:nth-child(2) {
-  animation-delay: 10s;
+.slide {
+  width: 100%;
+  flex: 0 0 33.3333%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
 }
 
-.slide:nth-child(3) {
-  animation-delay: 20s;
+.slide h2 {
+  color: var(--blue);
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-@keyframes slide {
-  0%,
-  26.6% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  16.6%,
-  33.3% {
-    opacity: 1;
+.slide p {
+  color: var(--black);
+  font-size: 14px;
+}
+
+@keyframes scroll {
+  0% {
     transform: translateY(0);
   }
-  33.3%,
+  33.33% {
+    transform: translateY(-33.3333);
+  }
+  66.66% {
+    transform: translateY(-66.6667%);
+  }
   100% {
-    opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-100%);
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
-  #hero {
-    height: 100vh;
-  }
-
-  #hero .containers {
-    margin-top: 100px;
-    height: 100vh;
-    flex-direction: column;
-  }
-
   .testimonial {
-    width: 90%;
-    height: 100vh;
-  }
-
-  #hero h2 {
-    font-size: 32px;
-  }
-
-  #hero p {
-    font-size: 16px;
-  }
-
-  .slide {
-    padding: 30px;
+    width: 40%;
   }
 }
 
 @media (max-width: 768px) {
-  #hero h2 {
-    font-size: 28px;
-  }
-  #hero .containers {
-    margin-top: 350px;
-    height: 15vh;
-    align-items: flex-end;
-    justify-content: center;
-    align-items: center;
+  .testimonial {
+    width: 50%;
   }
 
-  #hero p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  #hero h2 {
-    font-size: 24px;
+  .slide h2 {
+    font-size: 20px;
   }
 
-  #hero .containers {
-    margin-top: 350px;
-    height: 15vh;
-    align-items: flex-end;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #hero p {
+  .slide p {
     font-size: 12px;
   }
 }
 
-@media (max-height: 500px) {
-  #hero {
-    height: auto;
+@media (max-width: 480px) {
+  .testimonial {
+    width: 80%;
   }
 
-  .containers {
-    margin-top: 20px;
-    height: auto;
+  .slide h2 {
+    font-size: 18px;
+  }
+
+  .slide p {
+    font-size: 10px;
   }
 }
 
@@ -610,7 +562,7 @@ section {
 }
 
 .section-bg {
-  background-color: var(--white);
+  background-color: var(--paleblue);
 }
 
 .section-title {
@@ -625,7 +577,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: var(--purple);
+  color: var(--gray);
 }
 
 .section-title h2::after {
@@ -634,7 +586,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--Secondary);
+  background: var(--blue);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -646,9 +598,21 @@ section {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
+#featured-services {
+  padding: 40px 0;
+}
+
+.featured-services .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .flip-card {
-  width: 300px;
-  height: 200px;
+  margin: 20px;
+  width: 260px;
+  height: 230px;
   perspective: 1000px;
   font-family: sans-serif;
 }
@@ -685,16 +649,16 @@ section {
 }
 
 .flip-card-front h5 {
-  font-size: large;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .flip-card-front h5 a {
-  color: var(--opacityblack);
+  color: var(--gray);
 }
 
 .flip-card-back {
-  background-color: var(--purple);
+  background-color: var(--blue);
   color: white;
   transform: rotateY(180deg);
   font-size: 15px;
@@ -707,14 +671,42 @@ section {
 }
 
 .featured-services .icon {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .featured-services .icon i {
   font-size: 35px;
   line-height: 1;
-  color: var(--purple);
+  color: var(--blue);
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .flip-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .flip-card-back p {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    width: 150px;
+    height: 180px;
+  }
+
+  .flip-card-back p {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .flip-card-front h5 {
+    font-size: 14px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -732,7 +724,7 @@ section {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.8;
 }
 
 .video-container {
@@ -741,20 +733,8 @@ section {
   padding-bottom: 56.25%;
 }
 
-.text-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.7);
-}
-
 .text-center {
-  color: var(--opacityblack);
+  color: var(--black);
   padding: 10px 50px;
   font-weight: 600;
 }
@@ -763,31 +743,31 @@ section {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--purple);
+  color: var(--white);
 }
 
 .text-center p {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 20px;
-  color: var(--gray);
+  color: var(--white);
   font-weight: 400;
   font-size: 16px;
 }
 
 .text-center .cta-btn {
   display: inline-block;
-  background: var(--purple);
+  background: var(--blue);
   color: var(--white);
   font-weight: 600;
   padding: 10px 20px;
   border-radius: 12px;
-  font-family: Inter;
+  font-family: var(--font-sans);
 }
 
 .text-center .cta-btn:hover {
   background: var(--white);
-  color: var(--purple);
+  color: var(--blue);
 }
 
 /*--------------------------------------------------------------
@@ -796,14 +776,19 @@ section {
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
 }
-
+.about .hours-div {
+  border-right: 2px solid var(--blue);
+}
+.about .hours-div:last-child {
+  border-right: none;
+}
 .schedule {
   padding: 5px;
 }
@@ -821,7 +806,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: var(--Secondary);
+  color: var(--blue);
 }
 
 .about .content p:last-child {
@@ -835,13 +820,13 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin: 5px 0 10px 60px;
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .features .icon-box i {
   font-size: 48px;
   float: left;
-  color: var(--Secondary);
+  color: var(--blue);
 }
 
 .features .icon-box p {
@@ -875,7 +860,7 @@ section {
   background: var(--white);
   border-radius: 50%;
   transition: 0.5s;
-  color: var(--purple);
+  color: var(--blue);
   overflow: hidden;
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
 }
@@ -903,7 +888,7 @@ section {
 }
 
 .services .title a:hover {
-  color: var(--Secondary);
+  color: var(--blue);
 }
 
 .services .title::after {
@@ -912,7 +897,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background: var(--Secondary);
+  background: var(--blue);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -920,7 +905,7 @@ section {
 .services .description {
   line-height: 24px;
   font-size: 14px;
-  font-family: Inter;
+  font-family: var(--font-sans);
   color: var(--gray);
   font-weight: 500;
   opacity: 0.8;
@@ -998,7 +983,7 @@ section {
 .appointment .php-email-form input:focus,
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
-  border-color: var(--primary);
+  border-color: var(--blue);
 }
 
 .appointment .php-email-form input,
@@ -1011,16 +996,16 @@ section {
 }
 
 .appointment .php-email-form button[type="submit"] {
-  background: #8e1a4b;
+  background: #1465a3;
   border: 0;
   padding: 10px 35px;
-  color: #fff;
+  color: var(--white);
   transition: 0.4s;
   border-radius: 50px;
 }
 
 .appointment .php-email-form button[type="submit"]:hover {
-  background: #8e1a4b;
+  background: #1465a3;
 }
 
 /*--------------------------------------------------------------
@@ -1035,7 +1020,7 @@ section {
   padding: 20px;
   color: #555555;
   border-radius: 0;
-  border-left: 5px solid #fff;
+  border-left: 5px solid var(--white);
   cursor: pointer;
 }
 
@@ -1051,16 +1036,16 @@ section {
 }
 
 .departments .nav-link:hover h4 {
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .departments .nav-link.active {
-  background: #f7fcfc;
-  border-color: var(--primary);
+  background: var(--paleblue);
+  border-color: var(--blue);
 }
 
 .departments .nav-link.active h4 {
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .departments .tab-pane.active {
@@ -1085,7 +1070,7 @@ section {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .departments .tab-pane p {
@@ -1125,7 +1110,7 @@ section {
   margin: -40px 0 0 40px;
   position: relative;
   z-index: 2;
-  border: 6px solid #fff;
+  border: 6px solid var(--white);
 }
 
 .testimonials .testimonial-item h3 {
@@ -1164,7 +1149,7 @@ section {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #f0fafa;
+  background: var(--paleblue);
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -1179,13 +1164,13 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: var(--white);
   opacity: 1;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--blue);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--primary);
+  background-color: var(--blue);
 }
 
 /*--------------------------------------------------------------
@@ -1202,7 +1187,10 @@ section {
   border-radius: 4px;
   background: var(--white);
 }
-
+.doctors .doc-img {
+  border: 3px solid var(--blue);
+  border-radius: 50%;
+}
 .doctors .member .member-img {
   position: relative;
   overflow: hidden;
@@ -1216,7 +1204,7 @@ section {
   height: 40px;
   opacity: 0;
   transition: ease-in-out 0.3s;
-  background: var(--purple);
+  background: var(--blue);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   display: flex;
@@ -1238,7 +1226,7 @@ section {
 }
 
 .doctors .member .social a:hover {
-  color: var(--Secondary);
+  color: var(--blue);
 }
 
 .doctors .member .social i {
@@ -1254,7 +1242,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .doctors .member .member-info span {
@@ -1280,8 +1268,8 @@ section {
 
 .read-more {
   cursor: pointer;
-  color: var(--purple);
-  font-family: Inter;
+  color: var(--blue);
+  font-family: var(--font-sans);
 }
 
 /*--------------------------------------------------------------
@@ -1299,13 +1287,13 @@ section {
 .gallery .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: var(--white);
   opacity: 1;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--blue);
 }
 
 .gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--primary);
+  background-color: var(--blue);
 }
 
 .gallery .swiper-slide-active {
@@ -1318,9 +1306,9 @@ section {
   }
 
   .gallery .swiper-slide-active {
-    border: 6px solid var(--primary);
+    border: 6px solid var(--blue);
     padding: 4px;
-    background: #fff;
+    background: var(--white);
     z-index: 1;
     transform: scale(1.2);
     margin-top: 10px;
@@ -1359,7 +1347,7 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: var(--primary);
+  font-family: var(--blue);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1390,7 +1378,7 @@ section {
 }
 
 .faq .faq-list .collapsed:hover {
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .faq .faq-list .collapsed .icon-show {
@@ -1415,7 +1403,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: var(--primary);
+  color: var(--blue);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #c5ebec;
@@ -1423,7 +1411,7 @@ section {
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #8e1a4b;
+  color: var(--blue);
   font-weight: 700;
   margin: 10px 0;
 }
@@ -1442,7 +1430,7 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -1455,7 +1443,7 @@ section {
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -1464,7 +1452,7 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 15px;
 }
@@ -1490,7 +1478,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--primary);
+  border-color: var(--blue);
 }
 
 .contact .php-email-form input {
@@ -1502,10 +1490,10 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #8e1a4b;
+  background: var(--blue);
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: var(--white);
   transition: 0.4s;
   border-radius: 4px;
 }
@@ -1528,9 +1516,9 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #8e1a4b;
+  background: var(--blue);
   padding: 10 0 10px 0;
-  color: #ffffff;
+  color: var(--white) fff;
   font-size: 14px;
 }
 
